@@ -1,0 +1,22 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": "true",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "server:dev": "yarn workspace @monorepo/server dev",
+    "client:dev": "yarn workspace @monorepo/client start",
+    "relay": "yarn workspace @monorepo/client relay",
+    "update-schema": "yarn workspace @monorepo/server update-schema"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7",
+    "@monorepo/eslint-config": "*"
+  }
+}
